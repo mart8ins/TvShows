@@ -1,0 +1,22 @@
+<% layout('layout/boilerplate') -%>
+<link rel="stylesheet" href="/css/seasons.css">
+
+
+<div class="seasons">
+        <% if(showSeasons.length) {%>
+            <div class="season-container">
+                <% for(let season of showSeasons) {%>
+                    <a href="/show/<%= showId %>/season/<%= season.id %>">
+                    <div class="season-link">
+                            <p class="season_number">Season <%= season.number %> </p>
+                        <% if(season.image && season.image.medium) {%> 
+                        <img src="<%= season.image.medium %>" alt="">
+                        <% } else {%> 
+                            <img class="no_image" src="/images/no-img.jpg" alt="No Image">
+                            <% } %> 
+                    </div>
+                </a>
+                    <% } %>
+            </div>
+        <% }%> 
+</div>

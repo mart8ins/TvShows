@@ -1,0 +1,41 @@
+<% layout('layout/boilerplate') -%>
+<link rel="stylesheet" href="/css/home.css">
+
+<% if(searchRes) {%> 
+  <p class="last_search">Last search... "<%= searchRes %>" </p>
+  <% } %>
+<section class="landing_section">
+  
+    <div class="card-container">
+      <% if(searchResult && searchResult.length) {%>
+        <% for(let show of searchResult) {%> 
+          <% if(show.show.image && show.show.image.medium) {%>
+          <a href="/show/<%= show.show.id %>/seasons">
+            <div class="card" style="width: 16rem;">
+              
+                <img src="<%= show.show.image.medium %>" class="card-img-top" alt="<%= show.show.name %>">
+                <div class="card-body">
+                  <h5 class="card-title"><%= show.show.name %></h5>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Type: <%= show.show.type %></li>
+                    <li class="list-group-item">Premiered: <%= show.show.premiered %></li>
+                    <li class="list-group-item">Language: <%= show.show.language %></li>
+                  </ul>
+                </div>
+               
+            </div>
+          </a>
+          <% } %>
+            <% } %> 
+        <% } else {%>  
+
+          <!-- landing page info if there is no search made --> 
+<div class="intro">
+  <p><span>Find shows</span></p>
+  <p>See how much seasons it has</p>
+  <p>See details about every season</p>
+</div>
+          <% } %> 
+    </div>
+  
+</section>

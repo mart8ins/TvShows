@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=RocknRoll+One&display=swap');
+
+header {
+    position: fixed;
+    z-index: 10;
+    width: 100vw;
+    background-color: #17172D;
+    box-shadow: 0 10px 10px black;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+}
+
+.brand {
+    color: white;
+    font-family: 'RocknRoll One', sans-serif;
+    padding: 5px 10px;
+    font-size: 2.2rem;
+}
+
+.nav-top {
+    height: 80%;
+    margin-right: 50px;
+    background-color: #282841;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+}
+
+form {
+    display: flex;
+}
+
+.button {
+    border: none;
+    margin-left: 20px;
+    border-radius: 10px;
+    padding: 2px 10px;
+    box-shadow: 0 3px 3px white;
+    background-color: #01324A;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.button:hover {
+    cursor: pointer;
+    filter: brightness(140%)
+}
+
+.button:active {
+    transform: translateY(2px);
+    box-shadow: 0 1px 1px black;
+}

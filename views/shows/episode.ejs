@@ -1,0 +1,32 @@
+<% layout('layout/boilerplate') -%>
+<link rel="stylesheet" href="/css/episode.css">
+
+
+<a class="back_to_episodes" href="/show/<%= showId %>/season/<%= seasonId %>">Back to episode list</a>
+<div class="episode_data_container">
+    
+<div class="episode">
+    
+    <% if(detailsForEpisode.image && detailsForEpisode.image.original) {%> 
+    <img src="<%= detailsForEpisode.image.original %>" alt="<%= detailsForEpisode.name %>">
+    <% } else {%> 
+        <img class="no_image" src="/images/no-img.jpg" alt="No Image">
+        <% } %> 
+    <div class="episode_data">
+        <p><strong>Episode</strong> - <%= detailsForEpisode.name %> <span>S<%= detailsForEpisode.season %>E<%= detailsForEpisode.number %></span></p>
+        <p><strong>Type</strong> <%= detailsForEpisode.type %></p>
+        <p><strong>Airdate</strong> <%= detailsForEpisode.airdate %></p>
+        <p><strong>Airtime</strong> <%= detailsForEpisode.airtime %></p>
+        <p><strong>Runtime</strong> <%= detailsForEpisode.runtime %>min</p>
+        <% if(detailsForEpisode.summary) {%> 
+        <% let summary = detailsForEpisode.summary.replace("<p>", "").replace("</p>", "") %> 
+        <p><strong>Summary</strong> -  <%= summary %></p>
+        <% } else {%> 
+<p><strong>Summary</strong> - No description provided</p>  
+            <% } %> 
+        
+    </div>
+</div>
+
+</div>
+

@@ -1,0 +1,51 @@
+<% layout('layout/boilerplate') -%>
+<link rel="stylesheet" href="/css/episodes.css">
+
+<div class="episodes_container">
+    <a class="back_to_seasons" href="/show/<%= showId %>/seasons">
+        <span>Back to all seasons</span>
+    </a>
+    <% if(episodes.length) {%> 
+    <% for(let episode of episodes) {%>
+        <% if(episode.number) {%> 
+        <div class="episode">
+            <% if(episode.image && episode.image.medium) {%> 
+            <div class="episode_image">
+                <img src="<%= episode.image.medium %> " alt="">
+            </div>
+            <% } else {%> 
+                <div class="episode_image">
+                <img class="no_image" src="/images/no-img.jpg" alt="No Image">
+            </div>
+                <% } %> 
+            <div class="episode_info">
+                <div class="episode_title">
+                <p>Episode <%= episode.name %></p>
+                <div>
+                    <p><a class="to_episode_details" href="/show/<%= showId %>/season/<%= seasonId %>/episode/?season=<%= episode.season %>&number=<%= episode.number %>">Details for episode</a></p>
+                    <p>"S<%= episode.season %></p>
+                    <p>E<%= episode.number %>" </p>
+                    <p>  Aired on <%= episode.airdate %></p>
+                </div>
+                </div>
+
+                <div class="episode_description">
+                    <!-- to exclude p tag from description for episode-->
+                    <% if(episode.summary) {%> 
+                    <% let summaryString = episode.summary.replace("<p>", "").replace("</p>", "") %> 
+                    <%= summaryString %> 
+                    <% } else {%> 
+No description provided
+                        <% } %> 
+                </div>
+            </div>
+        </div>
+        <% } %> 
+        <% } %>  
+        <% } else {%>
+            <div class="no_episodes">
+                <p>At the moment there is no data about upcoming episodes</p>
+            </div>
+            <% } %> 
+    
+</div>

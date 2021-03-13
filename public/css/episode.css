@@ -1,0 +1,50 @@
+.episode_data_container {
+    padding: 230px;
+}
+
+.back_to_episodes {
+    position: absolute;
+    top: 120px;
+    left: 50px;
+    background-color: rgba(0, 0, 0, 0.678);
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    padding: 10px 30px;
+    transition: 0.5s;
+}
+
+.back_to_episodes:hover {
+    cursor: pointer;
+    color: white;
+    transform: scale(1.2);
+    border-radius: 20px;
+}
+
+.episode {
+    background-color: rgba(255, 255, 255, 0.774);
+    display: flex;
+    border-radius: 30px;
+}
+
+img {
+    width: 60%;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.no_image {
+    width: 490px;
+}
+
+span {
+    font-weight: bold;
+    font-size: 1.3rem;
+    float: right;
+}
+
+.episode_data {
+    padding: 30px;
+}
