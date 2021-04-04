@@ -19,7 +19,7 @@
 .back_to_episodes:hover {
     cursor: pointer;
     color: white;
-    transform: scale(1.2);
+    transform: scale(1.1);
     border-radius: 20px;
 }
 
@@ -47,4 +47,52 @@ span {
 
 .episode_data {
     padding: 30px;
+}
+
+
+
+@media screen and (max-width: 1026px) {
+    .episode_data_container {
+        padding: 20px;
+    }
+
+    .back_to_episodes {
+        top: 170px;
+        left: 0px;
+        right: 0px;
+        margin: 10px 40px;
+    }
+
+    .back_to_episodes:hover {
+        cursor: pointer;
+        color: white;
+        transform: scale(1.02);
+        border-radius: 20px;
+    }
+
+    .episode {
+        flex-direction: column;
+        margin-top: 250px;
+    }
+
+    img {
+        width: 100%;
+        border-bottom-left-radius: 5px;
+        border-top-left-radius: 5px;
+    }
+
+    .no_image {
+        width: 490px;
+    }
+
+    span {
+        font-weight: bold;
+        font-size: 1.1rem;
+        float: right;
+    }
+
+    .episode_data {
+        padding: 30px;
+        font-size: 0.7rem;
+    }
 }

@@ -57,8 +57,8 @@ a {
     position: relative;
     color: white;
     width: 90%;
-    height: 60vh;
-    font-size: 4.3rem;
+    height: initial;
+    font-size: 3.3rem;
     padding: 50px;
 }
 
@@ -91,4 +91,12 @@ a {
     background-color: rgba(0, 0, 0, 0.342);
     border-radius: 20px;
     border-bottom: 3px solid black;
+}
+
+@media screen and (max-width: 565px) {
+
+    .last_search {
+        font-size: 1.1rem;
+        top: 150px;
+    }
 }

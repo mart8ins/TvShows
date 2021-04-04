@@ -8,6 +8,7 @@ header {
     box-shadow: 0 10px 10px black;
     padding: 5px;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
 }
 
@@ -55,4 +56,19 @@ form {
 .button:active {
     transform: translateY(2px);
     box-shadow: 0 1px 1px black;
+}
+
+@media screen and (max-width: 565px) {
+    header {
+
+        display: flex;
+        flex-direction: column;
+        /* justify-content: start; */
+        align-items: center;
+    }
+
+    .nav-top {
+        margin: auto;
+    }
+
 }

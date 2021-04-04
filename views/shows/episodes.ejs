@@ -10,8 +10,8 @@
         <% if(episode.number) {%> 
         <div class="episode">
             <% if(episode.image && episode.image.medium) {%> 
-            <div class="episode_image">
-                <img src="<%= episode.image.medium %> " alt="">
+            <div class="episode_image" style="background-image: url('<%= episode.image.medium %>');">
+                
             </div>
             <% } else {%> 
                 <div class="episode_image">
@@ -20,12 +20,12 @@
                 <% } %> 
             <div class="episode_info">
                 <div class="episode_title">
-                <p>Episode <%= episode.name %></p>
+                <p><span class="epp_t">Episode</span> <%= episode.name %></p>
                 <div>
                     <p><a class="to_episode_details" href="/show/<%= showId %>/season/<%= seasonId %>/episode/?season=<%= episode.season %>&number=<%= episode.number %>">Details for episode</a></p>
-                    <p>"S<%= episode.season %></p>
-                    <p>E<%= episode.number %>" </p>
-                    <p>  Aired on <%= episode.airdate %></p>
+                    <p class="se">S<%= episode.season %></p>
+                    <p class="se">E<%= episode.number %> </p>
+                    <p> -Aired on <%= episode.airdate %></p>
                 </div>
                 </div>
 
