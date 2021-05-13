@@ -70,6 +70,7 @@ app.get("*", (req, res)=> {
     res.render("error")
 })
 
-app.listen(3000, ()=> {
-    console.log("App startet on port 3000");
+const port = 3001;
+app.listen(port, ()=> {
+    console.log("App startet on port 3001");
 })
